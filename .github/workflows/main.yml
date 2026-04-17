@@ -1,4 +1,4 @@
-name: My First Pipeline
+name: Python CI
 
 on: push
 
@@ -7,5 +7,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print message
-        run: echo "Hello from CI/CD pipeline"
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run Python file
+        run: python app.py
