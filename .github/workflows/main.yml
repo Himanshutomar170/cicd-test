@@ -1,4 +1,4 @@
-name: Python CI
+name: Python CI/CD
 
 on: push
 
@@ -15,3 +15,6 @@ jobs:
 
       - name: Run tests
         run: pytest
+
+      - name: Deploy step
+        run: echo "Deploying application..."
